@@ -1,6 +1,7 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user!
+
   def show
-    id = params[:id].presence || current_user.id
-    @user = User.find(id)
+    current_user
   end
 end
