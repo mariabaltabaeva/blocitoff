@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
-  resource :users, only: [:show]
+  get 'items/new'
+
+  resource :users, only: [:show] do
+    resource :items, only: [:create]
+  end
 
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
