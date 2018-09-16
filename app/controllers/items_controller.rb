@@ -14,10 +14,11 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
+    @item.user = current_user
 
     if @item.save
-      flas[:notice] = "Item was saved."
-      redirect_to [@item.current_user, @item]
+      flash[:notice] = "Item was saved."
+      redirect_to current_user
     else
       flash.now[:alert] = "Error creating item. Please try again later."
       render :new
