@@ -5,3 +5,21 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+15.times do
+  User.create!(
+    email: Faker::Internet.email,
+    password: Faker::Internet.password
+  )
+end
+users = User.all
+
+90.times do
+  Item.create!(
+    name: Faker::Verb.base,
+    user: users.sample
+  )
+end
+items = Item.all
+
+puts "#{User.count} users created"
+puts "#{Item.count} items created"
