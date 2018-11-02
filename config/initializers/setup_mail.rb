@@ -2,11 +2,11 @@ if Rails.env.development? || Rails.env.production?
    ActionMailer::Base.delivery_method = :smtp
    ActionMailer::Base.smtp_settings = {
      address:        'smtp.sendgrid.net',
-     port:           '2525',
+     port:           '587',
      authentication: :plain,
      user_name:      ENV['SENDGRID_USERNAME'],
      password:       ENV['SENDGRID_PASSWORD'],
-     domain:         'heroku.com',
+     domain:         'https://git.heroku.com/infinite-lake-87910.git',
      enable_starttls_auto: true
    }
  end
