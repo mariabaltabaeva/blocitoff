@@ -8,15 +8,13 @@
       <div class="mx-auto" style="width: 300px;"><ul>To-Do List:
       </div>
       <% @items.each do |item| %>
-      <li><%= render item %>
+      <li><%= render item %></li>
         <% end %>
-      </li>
+    </div>
     </ul>
   </h3>
 
   <div class="col-md-4">
     <%= link_to "New Item", items_new_path(@item), class: 'btn btn-success' %>
-
-
   </div>
 </div>

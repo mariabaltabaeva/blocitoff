@@ -12,7 +12,11 @@
  *
  *= require_tree .
  *= require_self
- */
+*/
+
+ @import 'bootstrap-sprockets';
+ @import 'bootstrap';
+
 /*!
  * Bootswatch v4.1.3
  * Homepage: https://bootswatch.com
@@ -9413,4 +9417,8 @@ a.text-dark:hover, a.text-dark:focus {
 
 .list-group-item.disabled:hover {
   color: #5c507c;
+}
+
+li {
+  list-style: none;
 }
