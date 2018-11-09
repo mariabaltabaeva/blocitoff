@@ -1,20 +1,23 @@
 <div class="row">
   <div class="col-md-8">
     <div class="media">
-
       <h2 class="media-heading" > User: <%= current_user.email %></h2>
-    </div>
-    <h3 class="media-body">
-      <div class="mx-auto" style="width: 300px;"><ul>To-Do List:
-      </div>
-      <% @items.each do |item| %>
-      <li><%= render item %></li>
-        <% end %>
-    </div>
-    </ul>
-  </h3>
 
-  <div class="col-md-4">
-    <%= link_to "New Item", items_new_path(@item), class: 'btn btn-success' %>
+      <h3 class="media-body">
+        <div class="mx-auto" style="width: 300px;">
+          <ul>
+            To-Do List:
+
+            <% @items.each do |item| %>
+            <li><%= render item %></li>
+            <% end %>
+          </ul>
+        </div>
+      </h3>
+
+      <div class="col-md-4">
+        <%= link_to "New Item", new_item_path, class: 'btn btn-success' %>
+      </div>
+    </div>
   </div>
 </div>
