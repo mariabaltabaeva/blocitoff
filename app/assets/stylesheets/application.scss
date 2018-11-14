@@ -9419,6 +9419,22 @@ a.text-dark:hover, a.text-dark:focus {
   color: #5c507c;
 }
 
-li {
-  list-style: none;
+a.text-dark:hover, a.text-dark:focus {
+ li {
+   list-style: none;
+ }
+
+.todo-item {
+  margin: 1rem 0;
+  padding-bottom: 0.8rem;
+  border-bottom: 1px solid #ddd;
+}
+
+.pl-sm {
+  padding-left: 0.5rem;
+}
+
+.pt-xs {
+  padding-top: 0.7rem;
+}
 }

@@ -1,4 +1,14 @@
 
-<%= link_to "", [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
-<%= item.name %>
-<%= distance_of_time_in_words(item.created_at, Time.now)%> ago
+<div class="media todo-item">
+  <div class="media-body">
+    <div class="mx-auto">
+      <%= link_to '', [item.user, item], method: :delete, class: 'glyphicon glyphicon-ok', remote: true %>
+      <span class='item-name pl-sm'>
+        <%= item.name %>
+      </span>
+      <p class='text-muted pt-sm'>
+        Created <%= time_ago_in_words(item.created_at) %> ago
+      </p>
+    </div>
+  </div>
+</div>

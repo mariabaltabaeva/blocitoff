@@ -28,6 +28,7 @@ class ItemsController < ApplicationController
   def destroy
      @item = Item.find(params[:id]).destroy
      respond_to do |format|
+       format.html { redirect_to root_path, notice: 'Item deleted' }
        format.js
      end
      redirect_to current_user

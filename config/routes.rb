@@ -6,8 +6,12 @@ Rails.application.routes.draw do
     resources :items, only: [ :create, :destroy]
   end
 
- resources :items, only: [:new]
+  resources :items, only: [:new]
   get 'about' => 'welcome#about'
+
+  authenticated :user do
+    root 'users#show', as: :authenticated_root
+  end
 
   root to: 'welcome#index'
 
