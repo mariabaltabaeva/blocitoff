@@ -16,3 +16,6 @@
 //= require bootstrap
 //= require_tree .
 //= require bootstrap-sprockets
+$(document).ready(function(){
+ $('.header').height($(window).height());
+})

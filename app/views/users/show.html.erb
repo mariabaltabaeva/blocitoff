@@ -2,12 +2,14 @@
   <div class="col-md-8">
     <h1 class="media-heading" > User: <%= current_user.email %></h1>
 
-    <h2>To-Do List:</h2>
-    <% @items.each do |item| %>
-    <%= render item %>
-    <% end %>
-  </div>
-  <div class="col-md-4">
-    <%= link_to "New Item", new_item_path, class: 'btn btn-success' %>
+    <h3 class="card-subtitle mb-2 text-muted">To-Do List:</h3>
+    <p class="card-text">
+      <% @items.each do |item| %>
+      <%= render item %>
+      <% end %>
+    </p>
+    <div class="col-md-4">
+      <%= link_to "New Item", new_item_path, class: 'btn btn-success' %>
+    </div>
   </div>
 </div>
